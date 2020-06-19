@@ -4,7 +4,7 @@ Created on Fri Jun 19 07:27:20 2020
 
 @author: aman kumar
 """
-
+"""Air Quality Prediction using Multiple Regression"""
 
 #importing the libraries
 import pandas as pd
@@ -47,4 +47,3 @@ X_test = np.append(arr=np.ones((400,1)).astype(int),values = X_test,axis=1)
 X_opt_test = X_test[:,[0,1,2,3,4,5]]
 regressor_OLS_test = sm.OLS(endog=y_pred,exog=X_opt_test).fit()
 regressor_OLS_test.summary()
-print('Test Score: ', regressor.score(X_test, y_pred))
